@@ -1,25 +1,32 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+/*
+ * FlyGreen24 – Home Page (Onepager)
+ * Design: "Atmospheric Altitude" – Aerospace Editorial
+ * Colors: Navy #0B1D3A, Teal #00D4AA, Warm White #F8F6F3
+ * Fonts: Space Grotesk (display), DM Sans (body), JetBrains Mono (mono)
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
 
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import SolutionsSection from "@/components/SolutionsSection";
+import PlatformSection from "@/components/PlatformSection";
+import B2BSection from "@/components/B2BSection";
+import AboutSection from "@/components/AboutSection";
+import PartnersSection from "@/components/PartnersSection";
+import CommunitySection from "@/components/CommunitySection";
+import Footer from "@/components/Footer";
+
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <SolutionsSection />
+      <PlatformSection />
+      <B2BSection />
+      <AboutSection />
+      <PartnersSection />
+      <CommunitySection />
+      <Footer />
     </div>
   );
 }
