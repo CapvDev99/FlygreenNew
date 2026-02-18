@@ -16,14 +16,14 @@ export default function B2BSection() {
   return (
     <section id="b2b" className="relative py-24 lg:py-32 bg-[#0B1D3A] overflow-hidden">
       {/* Background accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#00D4AA]/5 to-transparent" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#7ed957]/5 to-transparent" />
 
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section header */}
         <div className="max-w-3xl mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-12 bg-[#00D4AA]" />
-            <span className="text-[#00D4AA] text-sm font-mono tracking-widest uppercase">B2B Services</span>
+            <div className="h-px w-12 bg-[#7ed957]" />
+            <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">B2B Services</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6">
             Enterprise Solutions for General Aviation
@@ -40,7 +40,7 @@ export default function B2BSection() {
             return (
               <div
                 key={i}
-                className={`group relative bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 hover:border-[#00D4AA]/30 hover:bg-white/[0.07] ${
+                className={`group relative bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 hover:border-[#7ed957]/30 hover:bg-white/[0.07] ${
                   isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
                 style={{ transitionDelay: `${i * 200}ms` }}
@@ -54,8 +54,8 @@ export default function B2BSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D3A] via-[#0B1D3A]/40 to-transparent" />
                   <div className="absolute bottom-4 left-6">
-                    <div className="w-10 h-10 rounded-lg bg-[#00D4AA]/20 backdrop-blur-sm flex items-center justify-center">
-                      <Icon size={20} className="text-[#00D4AA]" />
+                    <div className="w-10 h-10 rounded-lg bg-[#7ed957]/20 backdrop-blur-sm flex items-center justify-center">
+                      <Icon size={20} className="text-[#7ed957]" />
                     </div>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ export default function B2BSection() {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, j) => (
                       <li key={j} className="flex items-center gap-2 text-sm text-white/70">
-                        <Check size={14} className="text-[#00D4AA] shrink-0" />
+                        <Check size={14} className="text-[#7ed957] shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -77,7 +77,7 @@ export default function B2BSection() {
 
                   <a
                     href={`mailto:${EXTERNAL_LINKS.email}?subject=${encodeURIComponent(service.title + " Inquiry")}`}
-                    className="inline-flex items-center gap-2 text-[#00D4AA] text-sm font-medium hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center gap-2 text-[#7ed957] text-sm font-medium hover:gap-3 transition-all duration-300"
                   >
                     Learn more <ArrowRight size={14} />
                   </a>
@@ -97,7 +97,7 @@ export default function B2BSection() {
           </div>
           <a
             href={`mailto:${EXTERNAL_LINKS.email}?subject=${encodeURIComponent("B2B Partnership Inquiry")}`}
-            className="shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#00D4AA] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#00E4BA] transition-all duration-300 hover:shadow-xl hover:shadow-[#00D4AA]/20 group"
+            className="shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#7ed957] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
           >
             Contact Us
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

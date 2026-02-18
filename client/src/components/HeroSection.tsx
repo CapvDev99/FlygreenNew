@@ -21,8 +21,8 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <div className="flex items-center gap-3 mb-8 animate-fade-in">
-            <div className="h-px w-12 bg-[#00D4AA]" />
-            <span className="text-[#00D4AA] text-sm font-mono tracking-widest uppercase">
+            <div className="h-px w-12 bg-[#7ed957]" />
+            <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">
               Sustainable Aviation Solutions
             </span>
           </div>
@@ -30,7 +30,7 @@ export default function HeroSection() {
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[1.08] tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
             Making Sustainability{" "}
-            <span className="text-[#00D4AA]">Accessible</span> for General Aviation
+            <span className="text-[#7ed957]">Accessible</span> for General Aviation
           </h1>
 
           {/* Subheadline */}
@@ -44,7 +44,7 @@ export default function HeroSection() {
               href={EXTERNAL_LINKS.app}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00D4AA] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#00E4BA] transition-all duration-300 hover:shadow-xl hover:shadow-[#00D4AA]/20 group"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7ed957] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
             >
               Get Started
               <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -68,7 +68,7 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <a href="#solutions" className="text-white/40 hover:text-[#00D4AA] transition-colors">
+        <a href="#solutions" className="text-white/40 hover:text-[#7ed957] transition-colors">
           <ArrowDown size={24} />
         </a>
       </div>
@@ -80,7 +80,7 @@ function MetricCard({ value, suffix, prefix, label, displayValue }: { value: num
   const { count, ref } = useCountUp(value, 2000);
   return (
     <div ref={ref} className="glass-card rounded-xl p-5 text-center">
-      <div className="text-3xl font-bold text-[#00D4AA] font-display">
+      <div className="text-3xl font-bold text-[#7ed957] font-display">
         {displayValue ? displayValue : <>{prefix}{count}{suffix}</>}
       </div>
       <div className="text-sm text-white/60 mt-1">{label}</div>

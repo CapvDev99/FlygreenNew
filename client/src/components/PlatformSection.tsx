@@ -11,9 +11,9 @@ export default function PlatformSection() {
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-12 bg-[#00D4AA]" />
-            <span className="text-[#00D4AA] text-sm font-mono tracking-widest uppercase">The Platform</span>
-            <div className="h-px w-12 bg-[#00D4AA]" />
+            <div className="h-px w-12 bg-[#7ed957]" />
+            <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">The Platform</span>
+            <div className="h-px w-12 bg-[#7ed957]" />
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1D3A] tracking-tight mb-6">
             3 Steps to Sustainability
@@ -33,12 +33,12 @@ export default function PlatformSection() {
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
             >
-              <div className="text-6xl font-bold text-[#00D4AA]/15 font-display absolute top-4 right-6">
+              <div className="text-6xl font-bold text-[#7ed957]/15 font-display absolute top-4 right-6">
                 {step.number}
               </div>
               <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-[#00D4AA]/10 flex items-center justify-center mb-5">
-                  <span className="text-[#00D4AA] font-bold font-mono text-sm">{step.number}</span>
+                <div className="w-10 h-10 rounded-full bg-[#7ed957]/10 flex items-center justify-center mb-5">
+                  <span className="text-[#7ed957] font-bold font-mono text-sm">{step.number}</span>
                 </div>
                 <h3 className="text-xl font-semibold text-[#0B1D3A] mb-3 font-display">{step.title}</h3>
                 <p className="text-[#0B1D3A]/60 leading-relaxed">{step.description}</p>
@@ -61,7 +61,7 @@ export default function PlatformSection() {
                 href={EXTERNAL_LINKS.compensate}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#00D4AA] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#00E4BA] transition-all duration-300 hover:shadow-xl hover:shadow-[#00D4AA]/30 group"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#7ed957] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/30 group"
               >
                 Calculate Your Emissions
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

@@ -1,7 +1,7 @@
 /*
  * FlyGreen24 – Home Page (Onepager)
  * Design: "Atmospheric Altitude" – Aerospace Editorial
- * Colors: Navy #0B1D3A, Teal #00D4AA, Warm White #F8F6F3
+ * Colors: Navy #0B1D3A, Teal #7ed957, Warm White #F8F6F3
  * Fonts: Space Grotesk (display), DM Sans (body), JetBrains Mono (mono)
  */
 

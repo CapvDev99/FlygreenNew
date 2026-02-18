@@ -19,7 +19,7 @@ export default function AboutSection() {
                 />
               </div>
               {/* Decorative accent */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-xl bg-[#00D4AA]/10 -z-10" />
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-xl bg-[#7ed957]/10 -z-10" />
               <div className="absolute -top-4 -left-4 w-16 h-16 rounded-xl bg-[#0B1D3A]/5 -z-10" />
             </div>
           </div>
@@ -27,8 +27,8 @@ export default function AboutSection() {
           {/* Content side */}
           <div className={`transition-all duration-1000 delay-200 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"}`}>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-12 bg-[#00D4AA]" />
-              <span className="text-[#00D4AA] text-sm font-mono tracking-widest uppercase">Our Story</span>
+              <div className="h-px w-12 bg-[#7ed957]" />
+              <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">Our Story</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-[#0B1D3A] tracking-tight mb-6">
               Shaping the Future of Sustainable Aviation
@@ -47,7 +47,7 @@ export default function AboutSection() {
             </div>
 
             {/* Vision quote */}
-            <blockquote className="mt-8 pl-6 border-l-2 border-[#00D4AA]">
+            <blockquote className="mt-8 pl-6 border-l-2 border-[#7ed957]">
               <p className="text-[#0B1D3A] font-medium italic">
                 "Our vision is to proactively accelerate the transition of General Aviation toward a net-zero future by making sustainability simple, accessible, and transparent for everyone."
               </p>

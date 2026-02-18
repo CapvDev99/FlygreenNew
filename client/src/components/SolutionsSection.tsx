@@ -23,8 +23,8 @@ export default function SolutionsSection() {
         {/* Section header */}
         <div className="max-w-2xl mb-16">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-12 bg-[#00D4AA]" />
-            <span className="text-[#00D4AA] text-sm font-mono tracking-widest uppercase">Our Approach</span>
+            <div className="h-px w-12 bg-[#7ed957]" />
+            <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">Our Approach</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6">
             Sustainable Aviation Made Simple
@@ -48,8 +48,8 @@ export default function SolutionsSection() {
                   style={{ transitionDelay: `${i * 150}ms` }}
                 >
                   <div className="flex gap-5">
-                    <div className="shrink-0 w-12 h-12 rounded-lg bg-[#00D4AA]/10 flex items-center justify-center">
-                      <Icon size={22} className="text-[#00D4AA]" />
+                    <div className="shrink-0 w-12 h-12 rounded-lg bg-[#7ed957]/10 flex items-center justify-center">
+                      <Icon size={22} className="text-[#7ed957]" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2 font-display">{solution.title}</h3>
@@ -72,7 +72,7 @@ export default function SolutionsSection() {
             </div>
             {/* Floating stat card */}
             <div className="absolute -bottom-6 -left-6 glass-card rounded-xl p-5 shadow-xl">
-              <div className="text-2xl font-bold text-[#00D4AA] font-display">80%</div>
+              <div className="text-2xl font-bold text-[#7ed957] font-display">80%</div>
               <div className="text-sm text-white/60">CO₂ reduction<br />with SAF</div>
             </div>
           </div>

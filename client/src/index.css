@@ -40,12 +40,16 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  /* Custom brand colors */
+  /* Brand colors – FlyGreen24 Brandguideline */
+  --color-brand-green: oklch(0.79 0.18 140);       /* #7ed957 */
+  --color-brand-green-light: oklch(0.84 0.18 140);  /* #8ee467 hover */
   --color-navy: oklch(0.2 0.04 250);
   --color-navy-light: oklch(0.25 0.04 250);
   --color-navy-dark: oklch(0.15 0.04 250);
-  --color-teal: oklch(0.78 0.15 175);
-  --color-teal-dark: oklch(0.65 0.15 175);
+  --color-brand-gray: oklch(0.42 0.01 250);         /* #575756 */
+  --color-brand-gray-10: oklch(0.90 0.005 250);     /* #e0e0df */
+  --color-brand-gray-20: oklch(0.80 0.005 250);     /* #c2c2c1 */
+  --color-signal-yellow: oklch(0.86 0.17 85);       /* #FFD700 */
   --color-warm-white: oklch(0.97 0.005 80);
   --color-slate-dim: oklch(0.55 0.02 250);
   --font-display: "Space Grotesk", sans-serif;
@@ -61,32 +65,32 @@
   --card-foreground: oklch(0.2 0.04 250);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0.04 250);
-  --primary: oklch(0.78 0.15 175);
+  --primary: oklch(0.79 0.18 140);
   --primary-foreground: oklch(0.15 0.04 250);
-  --secondary: oklch(0.93 0.01 250);
-  --secondary-foreground: oklch(0.3 0.04 250);
+  --secondary: oklch(0.90 0.005 250);
+  --secondary-foreground: oklch(0.42 0.01 250);
   --muted: oklch(0.93 0.005 250);
-  --muted-foreground: oklch(0.55 0.02 250);
+  --muted-foreground: oklch(0.42 0.01 250);
   --accent: oklch(0.2 0.04 250);
   --accent-foreground: oklch(0.97 0.005 80);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.88 0.01 250);
   --input: oklch(0.88 0.01 250);
-  --ring: oklch(0.78 0.15 175);
-  --chart-1: oklch(0.78 0.15 175);
-  --chart-2: oklch(0.65 0.15 175);
+  --ring: oklch(0.79 0.18 140);
+  --chart-1: oklch(0.79 0.18 140);
+  --chart-2: oklch(0.65 0.15 140);
   --chart-3: oklch(0.2 0.04 250);
   --chart-4: oklch(0.55 0.02 250);
   --chart-5: oklch(0.4 0.03 250);
   --sidebar: oklch(0.97 0.005 80);
   --sidebar-foreground: oklch(0.2 0.04 250);
-  --sidebar-primary: oklch(0.78 0.15 175);
+  --sidebar-primary: oklch(0.79 0.18 140);
   --sidebar-primary-foreground: oklch(0.15 0.04 250);
   --sidebar-accent: oklch(0.93 0.005 250);
   --sidebar-accent-foreground: oklch(0.2 0.04 250);
   --sidebar-border: oklch(0.88 0.01 250);
-  --sidebar-ring: oklch(0.78 0.15 175);
+  --sidebar-ring: oklch(0.79 0.18 140);
 }
 
 @layer base {
@@ -180,7 +184,7 @@ html {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.78 0.15 175);
+  background: oklch(0.79 0.18 140);
 }
 
 /* Partner logo marquee */

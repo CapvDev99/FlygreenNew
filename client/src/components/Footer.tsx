@@ -11,9 +11,9 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-12 bg-[#00D4AA]" />
-              <span className="text-[#00D4AA] text-sm font-mono tracking-widest uppercase">Get in Touch</span>
-              <div className="h-px w-12 bg-[#00D4AA]" />
+              <div className="h-px w-12 bg-[#7ed957]" />
+              <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">Get in Touch</span>
+              <div className="h-px w-12 bg-[#7ed957]" />
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6">
               Let's Build the Future Together
@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`mailto:${EXTERNAL_LINKS.email}`}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00D4AA] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#00E4BA] transition-all duration-300 hover:shadow-xl hover:shadow-[#00D4AA]/20 group"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7ed957] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
               >
                 <Mail size={18} />
                 {EXTERNAL_LINKS.email}
@@ -71,7 +71,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {NAV_LINKS.map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} className="text-white/40 hover:text-[#00D4AA] transition-colors text-sm">
+                    <a href={link.href} className="text-white/40 hover:text-[#7ed957] transition-colors text-sm">
                       {link.label}
                     </a>
                   </li>
@@ -84,17 +84,17 @@ export default function Footer() {
               <h4 className="text-white font-semibold mb-5 font-display">Legal</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href={EXTERNAL_LINKS.privacy} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#00D4AA] transition-colors text-sm">
+                  <a href={EXTERNAL_LINKS.privacy} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#7ed957] transition-colors text-sm">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href={EXTERNAL_LINKS.terms} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#00D4AA] transition-colors text-sm">
+                  <a href={EXTERNAL_LINKS.terms} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#7ed957] transition-colors text-sm">
                     Terms of Service
                   </a>
                 </li>
                 <li>
-                  <a href={EXTERNAL_LINKS.imprint} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#00D4AA] transition-colors text-sm">
+                  <a href={EXTERNAL_LINKS.imprint} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#7ed957] transition-colors text-sm">
                     Imprint
                   </a>
                 </li>
@@ -114,7 +114,7 @@ export default function Footer() {
             </p>
             <a
               href={`mailto:${EXTERNAL_LINKS.email}`}
-              className="text-white/30 hover:text-[#00D4AA] transition-colors text-sm"
+              className="text-white/30 hover:text-[#7ed957] transition-colors text-sm"
             >
               {EXTERNAL_LINKS.email}
             </a>
