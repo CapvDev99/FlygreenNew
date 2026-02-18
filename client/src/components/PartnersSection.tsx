@@ -3,11 +3,10 @@ import { useInView } from "@/hooks/useInView";
 
 export default function PartnersSection() {
   const { ref, isInView } = useInView();
-  // Double the partners array for seamless marquee
   const doubled = [...PARTNERS, ...PARTNERS];
 
   return (
-    <section id="partners" className="relative py-24 lg:py-32 bg-[#0B1D3A] overflow-hidden">
+    <section id="partners" className="relative py-24 lg:py-32 bg-[#111111] overflow-hidden">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-14">
         <div className="text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -25,9 +24,8 @@ export default function PartnersSection() {
 
       {/* Marquee */}
       <div className="relative">
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-[#0B1D3A] to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-[#0B1D3A] to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-[#111111] to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-[#111111] to-transparent z-10" />
 
         <div className="flex animate-marquee">
           {doubled.map((partner, i) => (

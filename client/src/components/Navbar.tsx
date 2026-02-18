@@ -12,7 +12,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 1024) setMobileOpen(false);
@@ -25,21 +24,15 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#0B1D3A]/95 backdrop-blur-xl shadow-lg shadow-black/10 py-3"
+          ? "bg-black/95 backdrop-blur-xl shadow-lg shadow-black/20 py-3"
           : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
         <a href="#" className="flex items-center gap-3 shrink-0">
-          <img
-            src={ASSETS.logo}
-            alt="FlyGreen24"
-            className="h-9 w-auto"
-          />
+          <img src={ASSETS.logo} alt="FlyGreen24" className="h-9 w-auto" />
         </a>
 
-        {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <a
@@ -54,13 +47,12 @@ export default function Navbar() {
             href={EXTERNAL_LINKS.app}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 px-5 py-2.5 bg-[#7ed957] text-[#0B1D3A] font-semibold text-sm rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-lg hover:shadow-[#7ed957]/20"
+            className="ml-4 px-5 py-2.5 bg-[#7ed957] text-black font-semibold text-sm rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-lg hover:shadow-[#7ed957]/20"
           >
             Get Started
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="lg:hidden text-white p-2"
@@ -70,13 +62,12 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu – increased max-h to prevent clipping */}
       <div
         className={`lg:hidden transition-all duration-500 ease-in-out ${
           mobileOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
-        <div className="px-4 pt-4 pb-6 bg-[#0B1D3A]/98 backdrop-blur-xl border-t border-white/10">
+        <div className="px-4 pt-4 pb-6 bg-black/98 backdrop-blur-xl border-t border-white/10">
           <div className="space-y-1">
             {NAV_LINKS.map((link) => (
               <a
@@ -95,7 +86,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="block w-full px-5 py-3.5 bg-[#7ed957] text-[#0B1D3A] font-semibold text-center rounded-lg hover:bg-[#8ee467] transition-all duration-300"
+              className="block w-full px-5 py-3.5 bg-[#7ed957] text-black font-semibold text-center rounded-lg hover:bg-[#8ee467] transition-all duration-300"
             >
               Get Started
             </a>

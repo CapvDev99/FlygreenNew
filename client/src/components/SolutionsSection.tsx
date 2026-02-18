@@ -12,7 +12,7 @@ export default function SolutionsSection() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="solutions" className="relative py-24 lg:py-32 bg-[#0B1D3A] overflow-hidden">
+    <section id="solutions" className="relative py-24 lg:py-32 bg-[#111111] overflow-hidden">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",

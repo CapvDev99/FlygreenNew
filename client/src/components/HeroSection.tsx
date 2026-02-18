@@ -12,14 +12,13 @@ export default function HeroSection() {
           alt="Aviation at altitude"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1D3A]/80 via-[#0B1D3A]/60 to-[#0B1D3A]/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1D3A]/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/95" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 w-full">
         <div className="max-w-3xl">
-          {/* Eyebrow */}
           <div className="flex items-center gap-3 mb-8 animate-fade-in">
             <div className="h-px w-12 bg-[#7ed957]" />
             <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">
@@ -27,24 +26,21 @@ export default function HeroSection() {
             </span>
           </div>
 
-          {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-[1.08] tracking-tight mb-6 animate-fade-in [animation-delay:200ms]">
             Making Sustainability{" "}
             <span className="text-[#7ed957]">Accessible</span> for General Aviation
           </h1>
 
-          {/* Subheadline */}
           <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-2xl mb-10 font-body animate-fade-in [animation-delay:400ms]">
             Digital platform and B2B solutions enabling General Aviation to achieve net-zero emissions through SAF access, carbon credits, and blockchain transparency.
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in [animation-delay:600ms]">
             <a
               href={EXTERNAL_LINKS.app}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7ed957] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7ed957] text-black font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
             >
               Get Started
               <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -76,12 +72,12 @@ export default function HeroSection() {
   );
 }
 
-function MetricCard({ value, suffix, prefix, label, displayValue }: { value: number; suffix: string; prefix?: string; label: string; displayValue?: string }) {
+function MetricCard({ value, suffix, label, displayValue }: { value: number; suffix: string; label: string; displayValue?: string }) {
   const { count, ref } = useCountUp(value, 2000);
   return (
     <div ref={ref} className="glass-card rounded-xl p-5 text-center">
       <div className="text-3xl font-bold text-[#7ed957] font-display">
-        {displayValue ? displayValue : <>{prefix}{count}{suffix}</>}
+        {displayValue ? displayValue : <>{count}{suffix}</>}
       </div>
       <div className="text-sm text-white/60 mt-1">{label}</div>
     </div>

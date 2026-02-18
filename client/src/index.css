@@ -43,15 +43,13 @@
   /* Brand colors – FlyGreen24 Brandguideline */
   --color-brand-green: oklch(0.79 0.18 140);       /* #7ed957 */
   --color-brand-green-light: oklch(0.84 0.18 140);  /* #8ee467 hover */
-  --color-navy: oklch(0.2 0.04 250);
-  --color-navy-light: oklch(0.25 0.04 250);
-  --color-navy-dark: oklch(0.15 0.04 250);
-  --color-brand-gray: oklch(0.42 0.01 250);         /* #575756 */
-  --color-brand-gray-10: oklch(0.90 0.005 250);     /* #e0e0df */
-  --color-brand-gray-20: oklch(0.80 0.005 250);     /* #c2c2c1 */
+  --color-brand-black: oklch(0 0 0);                /* #000000 */
+  --color-brand-black-soft: oklch(0.12 0 0);        /* very dark, softer than pure black */
+  --color-brand-gray: oklch(0.42 0.01 0);           /* #575756 */
+  --color-brand-gray-10: oklch(0.90 0.005 0);       /* #e0e0df */
+  --color-brand-gray-20: oklch(0.80 0.005 0);       /* #c2c2c1 */
   --color-signal-yellow: oklch(0.86 0.17 85);       /* #FFD700 */
   --color-warm-white: oklch(0.97 0.005 80);
-  --color-slate-dim: oklch(0.55 0.02 250);
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "DM Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -60,36 +58,36 @@
 :root {
   --radius: 0.5rem;
   --background: oklch(0.97 0.005 80);
-  --foreground: oklch(0.2 0.04 250);
+  --foreground: oklch(0.15 0 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.04 250);
+  --card-foreground: oklch(0.15 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.04 250);
+  --popover-foreground: oklch(0.15 0 0);
   --primary: oklch(0.79 0.18 140);
-  --primary-foreground: oklch(0.15 0.04 250);
-  --secondary: oklch(0.90 0.005 250);
-  --secondary-foreground: oklch(0.42 0.01 250);
-  --muted: oklch(0.93 0.005 250);
-  --muted-foreground: oklch(0.42 0.01 250);
-  --accent: oklch(0.2 0.04 250);
+  --primary-foreground: oklch(0 0 0);
+  --secondary: oklch(0.90 0.005 0);
+  --secondary-foreground: oklch(0.42 0.01 0);
+  --muted: oklch(0.93 0.005 0);
+  --muted-foreground: oklch(0.42 0.01 0);
+  --accent: oklch(0.15 0 0);
   --accent-foreground: oklch(0.97 0.005 80);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.88 0.01 250);
-  --input: oklch(0.88 0.01 250);
+  --border: oklch(0.88 0.01 0);
+  --input: oklch(0.88 0.01 0);
   --ring: oklch(0.79 0.18 140);
   --chart-1: oklch(0.79 0.18 140);
   --chart-2: oklch(0.65 0.15 140);
-  --chart-3: oklch(0.2 0.04 250);
-  --chart-4: oklch(0.55 0.02 250);
-  --chart-5: oklch(0.4 0.03 250);
+  --chart-3: oklch(0.15 0 0);
+  --chart-4: oklch(0.42 0.01 0);
+  --chart-5: oklch(0.3 0.01 0);
   --sidebar: oklch(0.97 0.005 80);
-  --sidebar-foreground: oklch(0.2 0.04 250);
+  --sidebar-foreground: oklch(0.15 0 0);
   --sidebar-primary: oklch(0.79 0.18 140);
-  --sidebar-primary-foreground: oklch(0.15 0.04 250);
-  --sidebar-accent: oklch(0.93 0.005 250);
-  --sidebar-accent-foreground: oklch(0.2 0.04 250);
-  --sidebar-border: oklch(0.88 0.01 250);
+  --sidebar-primary-foreground: oklch(0 0 0);
+  --sidebar-accent: oklch(0.93 0.005 0);
+  --sidebar-accent-foreground: oklch(0.15 0 0);
+  --sidebar-border: oklch(0.88 0.01 0);
   --sidebar-ring: oklch(0.79 0.18 140);
 }
 
@@ -154,17 +152,6 @@
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
-
-  /* Section with navy background */
-  .section-dark {
-    background-color: oklch(0.2 0.04 250);
-    color: oklch(0.93 0.005 80);
-  }
-
-  .section-navy {
-    background-color: oklch(0.15 0.04 250);
-    color: oklch(0.93 0.005 80);
-  }
 }
 
 /* Smooth scrolling */
@@ -177,14 +164,14 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: oklch(0.15 0.04 250);
+  background: #111;
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.4 0.04 250);
+  background: #575756;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.79 0.18 140);
+  background: #7ed957;
 }
 
 /* Partner logo marquee */

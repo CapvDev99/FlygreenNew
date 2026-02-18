@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       {/* Contact Section */}
-      <section id="contact" className="relative py-24 lg:py-32 bg-[#0B1D3A]">
+      <section id="contact" className="relative py-24 lg:py-32 bg-[#111111]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`mailto:${EXTERNAL_LINKS.email}`}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7ed957] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7ed957] text-black font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
               >
                 <Mail size={18} />
                 {EXTERNAL_LINKS.email}
@@ -45,7 +45,7 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#080F1E] border-t border-white/5">
+      <footer className="bg-black border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-3 gap-12">
             {/* Brand */}

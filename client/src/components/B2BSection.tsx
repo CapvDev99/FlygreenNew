@@ -1,6 +1,6 @@
 import { B2B_SERVICES, GENERATED, EXTERNAL_LINKS } from "@/lib/data";
 import { useInView } from "@/hooks/useInView";
-import { Layers, Cloud, Compass, Check, ArrowRight } from "lucide-react";
+import { Layers, Cloud, Compass, Check, ArrowRight, Clock } from "lucide-react";
 
 const ICONS = {
   layers: Layers,
@@ -14,7 +14,7 @@ export default function B2BSection() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="b2b" className="relative py-24 lg:py-32 bg-[#0B1D3A] overflow-hidden">
+    <section id="b2b" className="relative py-24 lg:py-32 bg-[#111111] overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#7ed957]/5 to-transparent" />
 
@@ -52,7 +52,7 @@ export default function B2BSection() {
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D3A] via-[#0B1D3A]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                   <div className="absolute bottom-4 left-6">
                     <div className="w-10 h-10 rounded-lg bg-[#7ed957]/20 backdrop-blur-sm flex items-center justify-center">
                       <Icon size={20} className="text-[#7ed957]" />
@@ -75,12 +75,10 @@ export default function B2BSection() {
                     ))}
                   </ul>
 
-                  <a
-                    href={`mailto:${EXTERNAL_LINKS.email}?subject=${encodeURIComponent(service.title + " Inquiry")}`}
-                    className="inline-flex items-center gap-2 text-[#7ed957] text-sm font-medium hover:gap-3 transition-all duration-300"
-                  >
-                    Learn more <ArrowRight size={14} />
-                  </a>
+                  <span className="inline-flex items-center gap-2 text-white/40 text-sm font-medium">
+                    <Clock size={14} />
+                    Coming soon
+                  </span>
                 </div>
               </div>
             );
@@ -97,7 +95,7 @@ export default function B2BSection() {
           </div>
           <a
             href={`mailto:${EXTERNAL_LINKS.email}?subject=${encodeURIComponent("B2B Partnership Inquiry")}`}
-            className="shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#7ed957] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
+            className="shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#7ed957] text-black font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
           >
             Contact Us
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

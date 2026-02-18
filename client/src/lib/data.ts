@@ -109,6 +109,24 @@ export const SOLUTIONS = [
   },
 ] as const;
 
+// Founders
+export const FOUNDERS = [
+  {
+    name: "Michael Franco",
+    role: "Co-Founder & CEO",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/mRBUMGldzlTfsnUG.png",
+    description: "A passionate pilot and aviation professional, Michael brings deep experience in business development and innovation management across the aviation industry. His love for flying, combined with a strong commitment to sustainability, inspired him to co-found FlyGreen24.",
+    linkedin: "https://www.linkedin.com/in/michael-franco-flygreen24/",
+  },
+  {
+    name: "Benja Begovic",
+    role: "Co-Founder & CTO",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/107751408/arTZOgssevOEDtcz.png",
+    description: "With a background in IT, blockchain, and cloud solutions, Benja is the tech mind behind FlyGreen24. His drive for integrating cutting-edge technologies with sustainable impact led him to join forces with Michael to build a platform where innovation meets climate action.",
+    linkedin: "https://www.linkedin.com/in/benja-begovic/",
+  },
+] as const;
+
 // Steps
 export const STEPS = [
   { number: "01", title: "Calculate Your Emissions", description: "Use our simple calculator to determine the carbon footprint of your flights." },

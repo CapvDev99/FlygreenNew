@@ -1,4 +1,4 @@
-import { STEPS, EXTERNAL_LINKS, GENERATED, ASSETS } from "@/lib/data";
+import { STEPS, EXTERNAL_LINKS, GENERATED } from "@/lib/data";
 import { useInView } from "@/hooks/useInView";
 import { ArrowRight } from "lucide-react";
 
@@ -15,10 +15,10 @@ export default function PlatformSection() {
             <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">The Platform</span>
             <div className="h-px w-12 bg-[#7ed957]" />
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0B1D3A] tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#575756] tracking-tight mb-6">
             3 Steps to Sustainability
           </h2>
-          <p className="text-lg text-[#0B1D3A]/60 leading-relaxed">
+          <p className="text-lg text-[#575756]/70 leading-relaxed">
             Our digital platform makes it simple for pilots and operators to contribute to a cleaner future in aviation.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function PlatformSection() {
           {STEPS.map((step, i) => (
             <div
               key={i}
-              className={`relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 group border border-[#0B1D3A]/5 ${
+              className={`relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 group border border-black/5 ${
                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
@@ -40,8 +40,8 @@ export default function PlatformSection() {
                 <div className="w-10 h-10 rounded-full bg-[#7ed957]/10 flex items-center justify-center mb-5">
                   <span className="text-[#7ed957] font-bold font-mono text-sm">{step.number}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-[#0B1D3A] mb-3 font-display">{step.title}</h3>
-                <p className="text-[#0B1D3A]/60 leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-semibold text-black mb-3 font-display">{step.title}</h3>
+                <p className="text-[#575756] leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}
@@ -49,19 +49,19 @@ export default function PlatformSection() {
 
         {/* Platform preview */}
         <div className={`relative transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}>
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-[#0B1D3A]/10 border border-[#0B1D3A]/5">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/10 border border-black/5">
             <img
               src={GENERATED.platform}
               alt="FlyGreen24 Platform"
               className="w-full h-auto"
             />
             {/* Overlay CTA */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B1D3A]/80 via-transparent to-transparent flex items-end justify-center pb-12">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end justify-center pb-12">
               <a
                 href={EXTERNAL_LINKS.compensate}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-[#7ed957] text-[#0B1D3A] font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/30 group"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#7ed957] text-black font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/30 group"
               >
                 Calculate Your Emissions
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
