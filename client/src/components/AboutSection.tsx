@@ -33,31 +33,29 @@ export default function AboutSection() {
               }`}
               style={{ transitionDelay: `${i * 200}ms` }}
             >
-              <div className="flex flex-col sm:flex-row">
-                {/* Portrait */}
-                <div className="sm:w-48 shrink-0">
-                  <img
-                    src={founder.image}
-                    alt={founder.name}
-                    className="w-full h-64 sm:h-full object-cover object-top"
-                  />
-                </div>
+              {/* Vertical layout: image on top, info below */}
+              <div className="aspect-[4/3] w-full overflow-hidden bg-[#7ed957]/10">
+                <img
+                  src={founder.image}
+                  alt={founder.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
 
-                {/* Info */}
-                <div className="p-6 sm:p-7 flex flex-col justify-center">
-                  <h3 className="text-xl font-bold text-black font-display mb-1">{founder.name}</h3>
-                  <p className="text-[#7ed957] font-medium text-sm mb-4">{founder.role}</p>
-                  <p className="text-[#575756] text-sm leading-relaxed mb-5">{founder.description}</p>
-                  <a
-                    href={founder.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-[#575756] hover:text-[#7ed957] transition-colors text-sm font-medium"
-                  >
-                    <Linkedin size={16} />
-                    Connect on LinkedIn
-                  </a>
-                </div>
+              {/* Info */}
+              <div className="p-6 sm:p-7">
+                <h3 className="text-xl font-bold text-black font-display mb-1">{founder.name}</h3>
+                <p className="text-[#7ed957] font-medium text-sm mb-4">{founder.role}</p>
+                <p className="text-[#575756] text-sm leading-relaxed mb-5">{founder.description}</p>
+                <a
+                  href={founder.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#575756] hover:text-[#7ed957] transition-colors text-sm font-medium"
+                >
+                  <Linkedin size={16} />
+                  Connect on LinkedIn
+                </a>
               </div>
             </div>
           ))}
