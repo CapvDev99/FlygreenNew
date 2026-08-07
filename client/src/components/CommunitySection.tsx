@@ -8,36 +8,49 @@ export default function CommunitySection() {
   return (
     <section className="relative py-24 lg:py-32 bg-[#F8F6F3]">
       <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid min-w-0 lg:grid-cols-2 gap-12">
           {/* Community card */}
-          <div className={`bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-black/5 transition-all duration-700 ${
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}>
+          <div
+            className={`min-w-0 bg-white rounded-2xl p-8 sm:p-10 shadow-sm border border-black/5 transition-all duration-700 ${
+              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
             <div className="w-12 h-12 rounded-xl bg-black flex items-center justify-center mb-6">
               <Users size={22} className="text-[#7ed957]" />
             </div>
-            <h3 className="text-2xl font-bold text-black mb-4 font-display">Join the Movement</h3>
+            <h3 className="text-2xl font-bold text-black mb-4 font-display">
+              Join the Movement
+            </h3>
             <p className="text-[#575756] leading-relaxed mb-6">
-              Be part of the FlyGreen24 community and help shape the future of sustainable aviation. Stay informed, contribute your voice, and unlock exclusive member benefits — together, we're making aviation cleaner, smarter, and more connected.
+              Be part of the FlyGreen24 community and help shape the future of
+              sustainable aviation. Stay informed, contribute your voice, and
+              unlock exclusive member benefits — together, we're making aviation
+              cleaner, smarter, and more connected.
             </p>
 
             {/* Newsletter form */}
-            <div className="flex gap-3">
+            <div className="flex min-w-0 flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 placeholder="Your email address"
-                className="flex-1 px-4 py-3 rounded-lg border border-black/10 bg-[#F8F6F3] text-black placeholder:text-[#575756]/40 focus:outline-none focus:ring-2 focus:ring-[#7ed957]/50 focus:border-[#7ed957] transition-all"
+                className="w-full min-w-0 flex-1 px-4 py-3 rounded-lg border border-black/10 bg-[#F8F6F3] text-black placeholder:text-[#575756]/40 focus:outline-none focus:ring-2 focus:ring-[#7ed957]/50 focus:border-[#7ed957] transition-all"
               />
               <button
                 onClick={() => {
-                  const input = document.querySelector('input[type="email"]') as HTMLInputElement;
+                  const input = document.querySelector(
+                    'input[type="email"]'
+                  ) as HTMLInputElement;
                   if (input?.value) {
-                    const subject = encodeURIComponent("Newsletter Subscription");
-                    const body = encodeURIComponent(`New subscription from: ${input.value}`);
+                    const subject = encodeURIComponent(
+                      "Newsletter Subscription"
+                    );
+                    const body = encodeURIComponent(
+                      `New subscription from: ${input.value}`
+                    );
                     window.location.href = `mailto:${EXTERNAL_LINKS.email}?subject=${subject}&body=${body}`;
                   }
                 }}
-                className="px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-[#333] transition-colors"
+                className="w-full sm:w-auto px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-[#333] transition-colors"
               >
                 Subscribe
               </button>
@@ -45,9 +58,11 @@ export default function CommunitySection() {
           </div>
 
           {/* Podcast card */}
-          <div className={`relative bg-black rounded-2xl overflow-hidden shadow-sm transition-all duration-700 delay-200 ${
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}>
+          <div
+            className={`relative min-w-0 bg-black rounded-2xl overflow-hidden shadow-sm transition-all duration-700 delay-200 ${
+              isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
             <div className="absolute inset-0">
               <img
                 src={ASSETS.podcastStudio}
@@ -60,9 +75,13 @@ export default function CommunitySection() {
               <div className="w-12 h-12 rounded-xl bg-[#7ed957]/20 backdrop-blur-sm flex items-center justify-center mb-6">
                 <Headphones size={22} className="text-[#7ed957]" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 font-display">FlyGreen24 Podcast</h3>
+              <h3 className="text-2xl font-bold text-white mb-4 font-display">
+                FlyGreen24 Podcast
+              </h3>
               <p className="text-white/60 leading-relaxed mb-6">
-                Join the conversation about sustainable aviation. Expert interviews, industry insights, and the latest developments in green aviation technology.
+                Join the conversation about sustainable aviation. Expert
+                interviews, industry insights, and the latest developments in
+                green aviation technology.
               </p>
               <a
                 href={EXTERNAL_LINKS.spotify}
@@ -71,7 +90,10 @@ export default function CommunitySection() {
                 className="inline-flex items-center gap-2 text-[#7ed957] font-medium hover:gap-3 transition-all duration-300 group"
               >
                 Listen on Spotify
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight
+                  size={16}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
               </a>
             </div>
           </div>

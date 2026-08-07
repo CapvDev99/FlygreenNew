@@ -41,14 +41,16 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   /* Brand colors – FlyGreen24 Brandguideline */
-  --color-brand-green: oklch(0.79 0.18 140);       /* #7ed957 */
-  --color-brand-green-light: oklch(0.84 0.18 140);  /* #8ee467 hover */
-  --color-brand-black: oklch(0 0 0);                /* #000000 */
-  --color-brand-black-soft: oklch(0.12 0 0);        /* very dark, softer than pure black */
-  --color-brand-gray: oklch(0.42 0.01 0);           /* #575756 */
-  --color-brand-gray-10: oklch(0.90 0.005 0);       /* #e0e0df */
-  --color-brand-gray-20: oklch(0.80 0.005 0);       /* #c2c2c1 */
-  --color-signal-yellow: oklch(0.86 0.17 85);       /* #FFD700 */
+  --color-brand-green: oklch(0.79 0.18 140); /* #7ed957 */
+  --color-brand-green-light: oklch(0.84 0.18 140); /* #8ee467 hover */
+  --color-brand-black: oklch(0 0 0); /* #000000 */
+  --color-brand-black-soft: oklch(
+    0.12 0 0
+  ); /* very dark, softer than pure black */
+  --color-brand-gray: oklch(0.42 0.01 0); /* #575756 */
+  --color-brand-gray-10: oklch(0.9 0.005 0); /* #e0e0df */
+  --color-brand-gray-20: oklch(0.8 0.005 0); /* #c2c2c1 */
+  --color-signal-yellow: oklch(0.86 0.17 85); /* #FFD700 */
   --color-warm-white: oklch(0.97 0.005 80);
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "DM Sans", sans-serif;
@@ -65,7 +67,7 @@
   --popover-foreground: oklch(0.15 0 0);
   --primary: oklch(0.79 0.18 140);
   --primary-foreground: oklch(0 0 0);
-  --secondary: oklch(0.90 0.005 0);
+  --secondary: oklch(0.9 0.005 0);
   --secondary-foreground: oklch(0.42 0.01 0);
   --muted: oklch(0.93 0.005 0);
   --muted-foreground: oklch(0.42 0.01 0);
@@ -98,10 +100,16 @@
   body {
     @apply bg-background text-foreground font-body antialiased;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
   }
-  code, pre {
+  code,
+  pre {
     font-family: var(--font-mono);
   }
   button:not(:disabled),
@@ -176,14 +184,25 @@ html {
 
 /* Partner logo marquee */
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  width: max-content;
+  animation: marquee 18s linear infinite;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+@media (max-width: 639px) {
+  .animate-marquee {
+    animation-duration: 14s;
+  }
 }
