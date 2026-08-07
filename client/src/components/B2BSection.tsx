@@ -1,104 +1,126 @@
-import { B2B_SERVICES, GENERATED, EXTERNAL_LINKS } from "@/lib/data";
+import { B2B_SERVICES, EXTERNAL_LINKS } from "@/lib/data";
 import { useInView } from "@/hooks/useInView";
-import { Layers, Cloud, Compass, Check, ArrowRight, Clock } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  Check,
+  Cloud,
+  Compass,
+  Layers,
+  Ticket,
+} from "lucide-react";
 
 const ICONS = {
   layers: Layers,
   cloud: Cloud,
+  chart: BarChart3,
+  ticket: Ticket,
   compass: Compass,
 } as const;
-
-const IMAGES = [GENERATED.whitelabel, GENERATED.platform, GENERATED.consulting];
 
 export default function B2BSection() {
   const { ref, isInView } = useInView();
 
   return (
-    <section id="b2b" className="relative py-24 lg:py-32 bg-[#111111] overflow-hidden">
+    <section
+      id="b2b"
+      className="relative py-24 lg:py-32 bg-white overflow-hidden"
+    >
       {/* Background accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#7ed957]/5 to-transparent" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#7ed957]/8 to-transparent" />
 
-      <div ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div
+        ref={ref}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative"
+      >
         {/* Section header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-4xl mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-12 bg-[#7ed957]" />
-            <span className="text-[#7ed957] text-sm font-mono tracking-widest uppercase">B2B Services</span>
+            <span className="text-[#64b943] text-sm font-mono tracking-widest uppercase">
+              B2B Services
+            </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6">
-            Enterprise Solutions for General Aviation
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black tracking-tight mb-6">
+            Tailored Solutions for Enterprise Aviation
           </h2>
-          <p className="text-lg text-white/60 leading-relaxed">
-            Partner with FlyGreen24 to integrate sustainability into your business. Our B2B solutions are designed for FBOs, flight schools, charter operators, and aviation service providers.
+          <p className="text-lg text-[#575756] leading-relaxed">
+            Make sustainability part of your core operations with FlyGreen24.
+            Our technology-powered B2B solutions are built to meet the
+            real-world demands of modern aviation.
           </p>
         </div>
 
-        {/* Service cards */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        {/* Five use cases */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-6 gap-6">
           {B2B_SERVICES.map((service, i) => {
             const Icon = ICONS[service.icon as keyof typeof ICONS];
+            const spanClass = i < 2 ? "xl:col-span-3" : "xl:col-span-2";
+
             return (
-              <div
-                key={i}
-                className={`group relative bg-white/[0.04] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden transition-all duration-700 hover:border-[#7ed957]/30 hover:bg-white/[0.07] ${
-                  isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              <article
+                key={`${service.title}-${i}`}
+                className={`group relative ${spanClass} flex h-full flex-col rounded-2xl border border-black/10 bg-[#F8F6F3] p-7 transition-all duration-700 hover:-translate-y-1 hover:border-[#7ed957]/50 hover:shadow-xl hover:shadow-black/5 ${
+                  isInView
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
                 }`}
-                style={{ transitionDelay: `${i * 200}ms` }}
+                style={{ transitionDelay: `${i * 120}ms` }}
               >
-                {/* Image header */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={IMAGES[i]}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-                  <div className="absolute bottom-4 left-6">
-                    <div className="w-10 h-10 rounded-lg bg-[#7ed957]/20 backdrop-blur-sm flex items-center justify-center">
-                      <Icon size={20} className="text-[#7ed957]" />
-                    </div>
-                  </div>
+                <div className="w-11 h-11 rounded-xl bg-black flex items-center justify-center mb-6">
+                  <Icon size={20} className="text-[#7ed957]" />
                 </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-3 font-display">{service.title}</h3>
-                  <p className="text-white/55 leading-relaxed mb-5 text-sm">{service.description}</p>
+                <h3 className="text-xl font-semibold text-black mb-3 font-display">
+                  {service.title}
+                </h3>
+                <p className="text-[#575756] leading-relaxed mb-6 text-sm">
+                  {service.description}
+                </p>
 
-                  {/* Features */}
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm text-white/70">
-                        <Check size={14} className="text-[#7ed957] shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <span className="inline-flex items-center gap-2 text-white/40 text-sm font-medium">
-                    <Clock size={14} />
-                    Coming soon
-                  </span>
-                </div>
-              </div>
+                <ul className="space-y-2 mt-auto">
+                  {service.features.map(feature => (
+                    <li
+                      key={feature}
+                      className="flex items-start gap-2 text-sm text-[#343433]"
+                    >
+                      <Check
+                        size={15}
+                        className="text-[#4f9e34] shrink-0 mt-0.5"
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
             );
           })}
         </div>
 
         {/* CTA bar */}
-        <div className={`mt-16 glass-card rounded-2xl p-8 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-6 transition-all duration-1000 ${
-          isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`} style={{ transitionDelay: "600ms" }}>
+        <div
+          className={`mt-16 rounded-2xl border border-black/10 bg-black p-8 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-6 transition-all duration-1000 ${
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{ transitionDelay: "600ms" }}
+        >
           <div>
-            <h3 className="text-2xl font-bold text-white font-display mb-2">Ready to integrate sustainability?</h3>
-            <p className="text-white/60">Let's discuss how FlyGreen24 can support your business goals.</p>
+            <h3 className="text-2xl font-bold text-white font-display mb-2">
+              Ready to integrate sustainability?
+            </h3>
+            <p className="text-white/65">
+              Let&apos;s discuss how FlyGreen24 can support your business goals.
+            </p>
           </div>
           <a
             href={`mailto:${EXTERNAL_LINKS.email}?subject=${encodeURIComponent("B2B Partnership Inquiry")}`}
             className="shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#7ed957] text-black font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
           >
             Contact Us
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight
+              size={18}
+              className="group-hover:translate-x-1 transition-transform"
+            />
           </a>
         </div>
       </div>

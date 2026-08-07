@@ -25,7 +25,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-black/95 backdrop-blur-xl shadow-lg shadow-black/20 py-3"
-          : "bg-transparent py-5"
+          : "bg-black/75 backdrop-blur-md py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -34,7 +34,7 @@ export default function Navbar() {
         </a>
 
         <div className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map(link => (
             <a
               key={link.href}
               href={link.href}
@@ -64,12 +64,14 @@ export default function Navbar() {
 
       <div
         className={`lg:hidden transition-all duration-500 ease-in-out ${
-          mobileOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          mobileOpen
+            ? "max-h-[600px] opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
         <div className="px-4 pt-4 pb-6 bg-black/98 backdrop-blur-xl border-t border-white/10">
           <div className="space-y-1">
-            {NAV_LINKS.map((link) => (
+            {NAV_LINKS.map(link => (
               <a
                 key={link.href}
                 href={link.href}
