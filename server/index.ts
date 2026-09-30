@@ -10,21 +10,36 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Serve static files from dist/public in production
   const staticPath =
     process.env.NODE_ENV === "production"
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
 
+  // Keep the homepage's canonical www hostname if the apex points here later.
+  app.use((req, res, next) => {
+    if (req.hostname.toLowerCase() === "flygreen24.com") {
+      res.redirect(301, `https://www.flygreen24.com${req.originalUrl}`);
+      return;
+    }
+    next();
+  });
+
+  // Only the canonical production hostname should be eligible for indexing.
+  app.use((req, res, next) => {
+    if (req.hostname.toLowerCase() !== "www.flygreen24.com") {
+      res.set("X-Robots-Tag", "noindex");
+    }
+    next();
+  });
+
   app.use(express.static(staticPath));
 
-  // Handle client-side routing - serve index.html for all routes
+  // Keep unknown SPA routes out of the search index instead of returning a soft 404.
   app.get("*", (_req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
+    res.status(404).sendFile(path.join(staticPath, "404.html"));
   });
 
   const port = process.env.PORT || 3000;
-
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
   });
