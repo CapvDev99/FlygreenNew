@@ -33,7 +33,7 @@ export default function Navbar() {
           <img src={ASSETS.logo} alt="FlyGreen24" className="h-9 w-auto" />
         </a>
 
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-5 xl:gap-8">
           {NAV_LINKS.map(link => (
             <a
               key={link.href}
@@ -44,10 +44,18 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href={EXTERNAL_LINKS.emissionsPlatform}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-white/70 hover:text-[#7ed957] transition-colors duration-300"
+          >
+            Emissions Platform <span className="text-[10px] uppercase text-[#7ed957]">Beta</span>
+          </a>
+          <a
             href={EXTERNAL_LINKS.app}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 px-5 py-2.5 bg-[#7ed957] text-black font-semibold text-sm rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-lg hover:shadow-[#7ed957]/20"
+            className="ml-1 xl:ml-4 px-5 py-2.5 bg-[#7ed957] text-black font-semibold text-sm rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-lg hover:shadow-[#7ed957]/20"
           >
             Get Started
           </a>
@@ -81,6 +89,15 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href={EXTERNAL_LINKS.emissionsPlatform}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="block text-white/80 hover:text-[#7ed957] hover:bg-white/5 transition-colors py-3 px-3 rounded-lg font-medium"
+            >
+              Emissions Platform (Beta)
+            </a>
           </div>
           <div className="mt-4 pt-4 border-t border-white/10">
             <a
