@@ -84,7 +84,7 @@ export const NAV_LINKS = [
 // External links
 export const EXTERNAL_LINKS = {
   app: "https://app.flygreen24.com",
-  emissionsBeta: "https://co2byfg24-production.up.railway.app",
+  emissionsPlatform: "https://emissions.flygreen24.com",
   calendly: "https://calendly.com/flygreen24/exchange",
   compensate: "https://app.flygreen24.com/compensate-flights",
   projects: "https://app.flygreen24.com/projects",

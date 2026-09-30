@@ -94,7 +94,7 @@ export default function B2BSection() {
                 </ul>
                 {service.title === "Corporate Emissions Accounting" && (
                   <a
-                    href={EXTERNAL_LINKS.emissionsBeta}
+                    href={EXTERNAL_LINKS.emissionsPlatform}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 mt-6 pt-5 border-t border-black/10 text-sm font-semibold text-[#4f9e34] hover:text-black transition-colors group/link"
