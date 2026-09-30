@@ -10,21 +10,27 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Serve static files from dist/public in production
   const staticPath =
     process.env.NODE_ENV === "production"
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
 
+  // Only the eventual production domain should be eligible for indexing.
+  app.use((req, res, next) => {
+    if (!["flygreen24.com", "www.flygreen24.com"].includes(req.hostname.toLowerCase())) {
+      res.set("X-Robots-Tag", "noindex");
+    }
+    next();
+  });
+
   app.use(express.static(staticPath));
 
-  // Handle client-side routing - serve index.html for all routes
+  // Keep unknown SPA routes out of the search index instead of returning a soft 404.
   app.get("*", (_req, res) => {
-    res.sendFile(path.join(staticPath, "index.html"));
+    res.status(404).sendFile(path.join(staticPath, "index.html"));
   });
 
   const port = process.env.PORT || 3000;
-
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
   });
