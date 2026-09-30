@@ -15,9 +15,18 @@ async function startServer() {
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
 
+  // Consolidate the two website hostnames once both point to this service.
+  app.use((req, res, next) => {
+    if (req.hostname.toLowerCase() === "www.flygreen24.com") {
+      res.redirect(301, `https://flygreen24.com${req.originalUrl}`);
+      return;
+    }
+    next();
+  });
+
   // Only the eventual production domain should be eligible for indexing.
   app.use((req, res, next) => {
-    if (!["flygreen24.com", "www.flygreen24.com"].includes(req.hostname.toLowerCase())) {
+    if (req.hostname.toLowerCase() !== "flygreen24.com") {
       res.set("X-Robots-Tag", "noindex");
     }
     next();
