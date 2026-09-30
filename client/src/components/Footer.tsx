@@ -76,6 +76,11 @@ export default function Footer() {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <a href={EXTERNAL_LINKS.emissionsPlatform} target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-[#7ed957] transition-colors text-sm">
+                    Emissions Platform (Beta)
+                  </a>
+                </li>
               </ul>
             </div>
 
