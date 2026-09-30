@@ -40,7 +40,7 @@ export default function SolutionsSection() {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black tracking-tight mb-6">
-            Sustainable Aviation Made Simple.
+            One Platform. Zero Complexity.
           </h2>
           <p className="text-lg text-[#575756] leading-relaxed max-w-3xl">
             FlyGreen24 removes the barriers that make aviation sustainability

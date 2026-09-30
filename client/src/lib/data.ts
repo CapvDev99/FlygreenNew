@@ -110,6 +110,7 @@ export const NAV_LINKS = [
 // External links
 export const EXTERNAL_LINKS = {
   app: "https://app.flygreen24.com",
+  calendly: "https://calendly.com/flygreen24/exchange",
   compensate: "https://app.flygreen24.com/compensate-flights",
   projects: "https://app.flygreen24.com/projects",
   privacy: "https://app.flygreen24.com/privacy-policy",
@@ -123,10 +124,10 @@ export const EXTERNAL_LINKS = {
 export const METRICS = [
   { value: 100, suffix: "%", label: "CO₂ Reduction with SAFc" },
   {
-    value: 1630,
+    value: 2000,
     suffix: "",
     label: "Tonnes of CO₂ Saved",
-    displayValue: "+1630",
+    displayValue: ">2000",
   },
   { value: 100, suffix: "%", label: "Blockchain Transparency" },
 ] as const;
@@ -134,7 +135,7 @@ export const METRICS = [
 // B2B Services
 export const B2B_SERVICES = [
   {
-    title: "Sustainability as a Service",
+    title: "White Label Solutions",
     description:
       "Integrate our sustainability platform under your own brand. Offer SAF access, carbon offsetting, and certificate generation to your clients.",
     features: [

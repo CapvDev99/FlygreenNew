@@ -31,12 +31,12 @@ export default function Footer() {
                 {EXTERNAL_LINKS.email}
               </a>
               <a
-                href={EXTERNAL_LINKS.app}
+                href={EXTERNAL_LINKS.calendly}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white/40 transition-all duration-300 group"
               >
-                Open Platform
+                Book a Demo
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
