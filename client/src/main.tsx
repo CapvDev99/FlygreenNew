@@ -1,8 +1,13 @@
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(<App />);
+const root = document.getElementById("root")!;
+if (root.hasChildNodes()) {
+  hydrateRoot(root, <App />);
+} else {
+  createRoot(root).render(<App />);
+}
 
 const analyticsEndpoint = import.meta.env.VITE_ANALYTICS_ENDPOINT;
 const analyticsWebsiteId = import.meta.env.VITE_ANALYTICS_WEBSITE_ID;
