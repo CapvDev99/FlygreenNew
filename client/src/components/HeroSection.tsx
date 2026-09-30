@@ -9,7 +9,7 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center overflow-hidden bg-[#F8F6F3]"
     >
       {/* Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 hidden sm:block">
         <img
           src={ASSETS.heroPc12}
           alt="PC-12 flying above an alpine forest"
@@ -24,21 +24,20 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-black leading-[1.06] tracking-tight mb-7 animate-fade-in">
             Sustainable Aviation{" "}
-            <span className="text-[#64b943]">Made Simple.</span>
+            <span className="text-[#64b943]">Made Simple</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-[#343433] leading-relaxed max-w-2xl mb-7 font-body animate-fade-in [animation-delay:200ms]">
-            FlyGreen24 removes the barriers that make aviation sustainability
-            complex. Through flight emissions calculation, SAF Book &amp; Claim,
-            regional carbon credits, and blockchain-powered traceability, we
-            enable immediate, credible, and scalable climate action across the
-            aviation industry.
+          <p className="text-lg sm:text-xl text-[#343433] leading-relaxed max-w-2xl mb-7 sm:mb-9 font-body animate-fade-in [animation-delay:200ms]">
+            Sustainable Aviation Fuel access, verified carbon credits, emissions
+            accounting, and expert guidance delivered through our platform,
+            embedded in yours, or built around your strategy.
           </p>
 
-          <p className="max-w-2xl border-l-4 border-[#7ed957] pl-5 text-base sm:text-lg font-semibold text-[#4f9e34] leading-relaxed mb-9 animate-fade-in [animation-delay:350ms]">
-            No hardware upgrades. No operational disruption. No procurement
-            complexity.
-          </p>
+          <img
+            src={ASSETS.heroPc12}
+            alt="PC-12 flying above an alpine forest"
+            className="sm:hidden w-full aspect-[16/10] object-cover object-[65%_center] rounded-xl mb-8 shadow-lg"
+          />
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in [animation-delay:500ms]">
             <a
@@ -83,9 +82,9 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <a
-          href="#solutions"
+          href="#partners"
           className="text-black/35 hover:text-[#64b943] transition-colors"
-          aria-label="Scroll to solutions"
+          aria-label="Scroll to partners"
         >
           <ArrowDown size={24} />
         </a>

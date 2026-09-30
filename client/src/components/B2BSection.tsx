@@ -113,10 +113,12 @@ export default function B2BSection() {
             </p>
           </div>
           <a
-            href={`mailto:${EXTERNAL_LINKS.email}?subject=${encodeURIComponent("B2B Partnership Inquiry")}`}
+            href={EXTERNAL_LINKS.calendly}
+            target="_blank"
+            rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#7ed957] text-black font-semibold rounded-lg hover:bg-[#8ee467] transition-all duration-300 hover:shadow-xl hover:shadow-[#7ed957]/20 group"
           >
-            Contact Us
+            Book a Call
             <ArrowRight
               size={18}
               className="group-hover:translate-x-1 transition-transform"

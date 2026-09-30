@@ -18,7 +18,7 @@ export default function PlatformSection() {
             <div className="h-px w-12 bg-[#7ed957]" />
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black tracking-tight mb-6">
-            Carbon-neutral in 3 steps
+            Tackle your Flight Emissions in 3 Steps
           </h2>
           <p className="text-lg text-[#575756] leading-relaxed">
             FlyGreen24&apos;s digital platform helps General Aviation to move
