@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://flygreen24.com/sitemap.xml
+Sitemap: https://www.flygreen24.com/sitemap.xml
