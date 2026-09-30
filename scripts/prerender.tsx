@@ -25,7 +25,7 @@ try {
   const notFound = html
     .replace(/<title>[^<]*<\/title>/, "<title>Page Not Found | FlyGreen24</title>")
     .replace('<meta name="robots" content="index, follow" />', '<meta name="robots" content="noindex" />')
-    .replace('<link rel="canonical" href="https://flygreen24.com/" />', "")
+    .replace('<link rel="canonical" href="https://www.flygreen24.com/" />', "")
     .replace(root, `<div id="root">${renderToString(React.createElement(App, { ssrPath: "/404" }))}</div>`);
   writeFileSync(path.resolve("dist/public/404.html"), notFound);
   writeFileSync(indexPath, html.replace(root, `<div id="root">${content}</div>`));

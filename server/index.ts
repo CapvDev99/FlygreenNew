@@ -15,18 +15,18 @@ async function startServer() {
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
 
-  // Consolidate the two website hostnames once both point to this service.
+  // Keep the homepage's canonical www hostname if the apex points here later.
   app.use((req, res, next) => {
-    if (req.hostname.toLowerCase() === "www.flygreen24.com") {
-      res.redirect(301, `https://flygreen24.com${req.originalUrl}`);
+    if (req.hostname.toLowerCase() === "flygreen24.com") {
+      res.redirect(301, `https://www.flygreen24.com${req.originalUrl}`);
       return;
     }
     next();
   });
 
-  // Only the eventual production domain should be eligible for indexing.
+  // Only the canonical production hostname should be eligible for indexing.
   app.use((req, res, next) => {
-    if (req.hostname.toLowerCase() !== "flygreen24.com") {
+    if (req.hostname.toLowerCase() !== "www.flygreen24.com") {
       res.set("X-Robots-Tag", "noindex");
     }
     next();
